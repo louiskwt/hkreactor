@@ -31,7 +31,7 @@ export async function getStaticProps({ params }) {
 		'fields.slug': params.slug
 	});
 
-	if (!item.length) {
+	if (!items.length) {
 		return {
 			redirect: {
 				destination: '/',
