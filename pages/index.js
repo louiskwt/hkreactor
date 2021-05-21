@@ -17,11 +17,18 @@ export async function getStaticProps() {
 export default function Blogs({ blogs }) {
 	console.log(blogs);
 	return (
-		<div className='recipe-list'>
+		<div className='blog-list'>
 			Latest Blog
 			{blogs.map((blog) => (
 				<BlogCard key={blog.sys.id} blog={blog} />
 			))}
+			<style jsx>{`
+				.blog-list {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					grid-gap: 20px 30px;
+				}
+			`}</style>
 		</div>
 	);
 }
